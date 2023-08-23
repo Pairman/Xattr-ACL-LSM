@@ -23,7 +23,7 @@
  * XATTR_VALUE_XATTRACL_ALLOW: allow execution or reading itself
  * XATTR_VALUE_XATTRACL_BLOCK: block execution or reading
  */
-#define XATTR_XATTRACL_SUFFIX		"perm"
+#define XATTR_XATTRACL_SUFFIX		"xattracl"
 #define XATTR_NAME_XATTRACL	XATTR_SECURITY_PREFIX XATTR_XATTRACL_SUFFIX
 #define XATTR_NAME_XATTRACL_LEN		13
 #define XATTR_VALUE_XATTRACL_TRUST	"trust"
