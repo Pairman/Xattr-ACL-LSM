@@ -3,7 +3,7 @@ The Xattr-ACL extended-attribute-based Linux Security Module for Linux 6.1. Test
 
 # Before Usage
 Modify accordingly and execute ```setxattr.sh``` to initialize your system. Make sure you have ```python3-xattr``` installed.
-Should be enabled in the ```Security Options -> Enable Xattr-ACL LSM``` kernel config and compiled against the Linux source provided by your distribution. This is the ONLY and ONLY MAJOR LSM and NOT compatible with others.
+Should be enabled in the ```Security Options -> Xattr-ACL LSM Support``` kernel config and compiled against the Linux source provided by your distribution. This is the ONLY and ONLY MAJOR LSM and NOT compatible with others.
 
 # Xattr and Permission Setup
 | Value for Xattr "security.xattracl" | Process Privileges | File Privileges |
