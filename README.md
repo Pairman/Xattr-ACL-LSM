@@ -8,6 +8,6 @@ Should be enabled in the ```Security Options -> Xattr-ACL LSM``` kernel config a
 # Xattr and Permission Setup
 | Value for Xattr "security.xattracl" | Process Privileges | File Privileges |
 | --- | --- | --- |
-| "trust" | Executable. Open all files including "block"ed ones. Privilege will be inherited by all child processes. | Readable |
-| "allow" | Executable. Open non-"block"ed files | Readable |
+| "trust" | Executable. All files readable including "block"ed ones. Privilege inheritable by child processes. | Readable |
+| "allow" | Executable. Non-"block"ed files readable | Readable |
 | "block" / ... | Inexecutable | Unreadable except "trust"ed processes |
