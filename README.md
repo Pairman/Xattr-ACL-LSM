@@ -6,7 +6,7 @@ Modify accordingly and execute ```setxattr.sh``` to initialize your system. Make
 Should be enabled in the ```Security Options -> Xattr-ACL LSM``` kernel config and compiled against the Linux source provided by your distribution. This is the ONLY and ONLY MAJOR LSM and NOT compatible with others.
 
 # Xattr and Permission Setup
-| Value for Xattr Name "security.xattracl" | Process Privileges | File Privileges |
+| Value for Xattr "security.xattracl" | Process Privileges | File Privileges |
 | --- | --- | --- |
 | "trust" | Executable. Open all files including "block"ed ones. Privilege will be inherited by all child processes. | Readable |
 | "allow" | Executable. Open non-"block"ed files | Readable |
