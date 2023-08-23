@@ -1,0 +1,10 @@
+# SPDX-License-Identifier: GPL-3.0-only
+config SECURITY_XATTRACL
+	bool "Xattr-ACL LSM Support"
+	depends on SECURITY
+	default n
+	help
+	  This selects the Xattr-ACL LSM.
+	  Xattr-ACL is an xattr-based security module, useful for auditing 
+	  program execution, shared library loading and file operations.
+	  If you are unsure how to answer this question, answer N.
