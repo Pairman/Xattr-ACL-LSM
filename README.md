@@ -1,4 +1,4 @@
-# Xattr-ACL-LSM
+# Xattr-ACL
 The Xattr-ACL extended-attribute-based Linux Security Module for Linux 6.1. Tested on Fedora 38 and Debian 12 with proper functionalities.
 
 # Before Usage
