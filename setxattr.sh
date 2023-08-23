@@ -6,7 +6,7 @@ setxattr_dirs=("/usr/"{"bin","games","include","lib","lib32","lib64","libexec","
 
 setxattr_func(){
 	echo "$fmt $1: Started.";
-	sudo find $1 -type f -exec xattr -w security.perm allow '{}' \;
+	sudo find $1 -type f -exec xattr -w security.xattracl allow '{}' \;
 	echo "$fmt $1: Done.";
 }
 
