@@ -251,7 +251,7 @@ int xattracl_file_permission(struct file *file, int mask)
 	/* Skip for non-regular files or pseudo filesystems. */
 	dentry = file->f_path.dentry;
 	if (!S_ISREG(d_backing_inode(dentry)->i_mode) ||
-	   xattracl_common_file_check_fs(dentry))
+	    xattracl_common_file_check_fs(dentry))
 		return 0;
 
 	/* Set xattr value to XATTR_VALUE_XATTRACL_BLOCK. */
