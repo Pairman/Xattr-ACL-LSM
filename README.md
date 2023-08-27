@@ -10,4 +10,4 @@ Should be enabled in the ```Security Options -> Xattr-ACL LSM Support``` kernel 
 | --- | --- | --- |
 | "trust" | Executable. All files readable including "block"ed ones. Privilege inheritable by child processes | Readable |
 | "allow" | Executable. Non-"block"ed files readable | Readable |
-| "block" / ... | Inexecutable | Unreadable except "trust"ed processes |
+| "block" / ... | Inexecutable | Unreadable except by "trust"ed processes |
