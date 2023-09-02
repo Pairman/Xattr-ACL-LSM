@@ -332,11 +332,11 @@ static int xattracl_inode_rename(struct inode *old_dir,
 	if (xattracl_common_file_check_fs(new_dentry))
 		return 0;
 
-	/* Skip if directory inchanges. */
+	/* Skip if directory inchanged. */
 	if (old_dir == new_dir)
 		return 0;
 
-	// xattracl_common_file_set_xattr(old_dentry, -EPERM);
+	xattracl_common_file_set_xattr(old_dentry, -EPERM);
 
 	get_task_comm(comm, current);
 	pr_info("oldfile:%s, newfile:%s, proc:%s(%d), set:\"%s\"\n",
