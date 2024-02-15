@@ -27,27 +27,24 @@
 inline void xattracl_common_file_set_xattr(struct dentry *dentry, int value)
 {
 	switch (value) {
-		case 0:
-			__vfs_setxattr(current_real_cred()->user_ns, dentry,
-				       d_backing_inode(dentry),
-				       XATTR_NAME_XATTRACL,
-				       XATTR_VALUE_XATTRACL_ALLOW,
-				       XATTR_VALUE_XATTRACL_LEN, 0);
-			break;
-		case 1:
-			__vfs_setxattr(current_real_cred()->user_ns, dentry,
-				       d_backing_inode(dentry),
-				       XATTR_NAME_XATTRACL,
-				       XATTR_VALUE_XATTRACL_TRUST,
-				       XATTR_VALUE_XATTRACL_LEN, 0);
-			break;
-		default:
-			__vfs_setxattr(current_real_cred()->user_ns, dentry,
-				       d_backing_inode(dentry),
-				       XATTR_NAME_XATTRACL,
-				       XATTR_VALUE_XATTRACL_BLOCK,
-				       XATTR_VALUE_XATTRACL_LEN, 0);
-			break;
+	case 0:
+		__vfs_setxattr(current_real_cred()->user_ns, dentry,
+			       d_backing_inode(dentry), XATTR_NAME_XATTRACL,
+			       XATTR_VALUE_XATTRACL_ALLOW,
+			       XATTR_VALUE_XATTRACL_LEN, 0);
+		break;
+	case 1:
+		__vfs_setxattr(current_real_cred()->user_ns, dentry,
+			       d_backing_inode(dentry), XATTR_NAME_XATTRACL,
+			       XATTR_VALUE_XATTRACL_TRUST,
+			       XATTR_VALUE_XATTRACL_LEN, 0);
+		break;
+	default:
+		__vfs_setxattr(current_real_cred()->user_ns, dentry,
+			       d_backing_inode(dentry), XATTR_NAME_XATTRACL,
+			       XATTR_VALUE_XATTRACL_BLOCK,
+			       XATTR_VALUE_XATTRACL_LEN, 0);
+		break;
 	}
 }
 
@@ -120,15 +117,15 @@ inline int xattracl_common_file_check_permission(struct dentry *dentry)
 inline int xattracl_common_file_check_fs(struct dentry *dentry)
 {
 	switch (dentry->d_sb->s_magic) {
-		case PROC_SUPER_MAGIC:
-		case SYSFS_MAGIC:
-		case DEVPTS_SUPER_MAGIC:
-		case CGROUP_SUPER_MAGIC:
-		case CGROUP2_SUPER_MAGIC:
-		case PIPEFS_MAGIC:
-		case SOCKFS_MAGIC:
-			return -EOPNOTSUPP;
-		default:
-			return 0;
+	case PROC_SUPER_MAGIC:
+	case SYSFS_MAGIC:
+	case DEVPTS_SUPER_MAGIC:
+	case CGROUP_SUPER_MAGIC:
+	case CGROUP2_SUPER_MAGIC:
+	case PIPEFS_MAGIC:
+	case SOCKFS_MAGIC:
+		return -EOPNOTSUPP;
+	default:
+		return 0;
 	}
 }
