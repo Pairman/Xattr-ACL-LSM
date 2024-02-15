@@ -10,11 +10,6 @@
 #ifndef _SECURITY_XATTRACL_COMMON_H
 #define _SECURITY_XATTRACL_COMMON_H
 
-
-/*
- * Name of Xattr-ACL LSM.
- */
-
 /*
  * Xattr name, values and their sizes
  * as we introduce the three-level access control.
