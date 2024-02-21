@@ -403,7 +403,7 @@ static struct security_hook_list xattracl_hooks[] __lsm_ro_after_init = {
  *
  * Returns 0.
  */
-static __init int xattracl_init(void)
+static int __init xattracl_init(void)
 {
 	security_add_hooks(xattracl_hooks, ARRAY_SIZE(xattracl_hooks),
 			   KBUILD_MODNAME);
